@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const links = [
   { label: 'Menú', href: '#menu' },
@@ -32,11 +33,15 @@ export default function Nav() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-        <a
-          href="#"
-          className="font-playfair text-lg text-crema tracking-[0.25em] uppercase hover:text-terracota transition-colors duration-300"
-        >
-          Origen
+        <a href="#" className="flex items-center">
+          <Image
+            src="/origen_logo.png"
+            alt="Origen Café"
+            width={140}
+            height={60}
+            style={{ maxWidth: '140px', width: 'auto', height: 'auto' }}
+            priority
+          />
         </a>
 
         {/* Desktop links */}
